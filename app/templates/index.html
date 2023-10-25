@@ -1,0 +1,70 @@
+<!-- extending base.html file -->
+
+{% extends 'base.html' %}
+
+<!-- enter title for page here -->
+{% block title %} Home {% endblock %}
+
+<!-- main content -->
+
+{% block main_content %}
+<h1 class="text-center">Flask + Bootstrap</h1>
+<div class="d-flex align-items-center justify-content-center">
+  <div>
+    <a target="_blank" href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#quickstart">
+      <img
+        class="logo"
+        src="{{ url_for('static', filename='images/flask.jpg')}}"
+        alt="Flask Logo"
+        width="150px" />
+    </a>
+    
+  </div>
+  <p class="fs-1 fw-bold">+</p>
+  <div>
+    <a target="_blank"
+      href="https://getbootstrap.com/docs/5.3/">
+        <img
+          class="logo"
+          src="{{ url_for('static', filename='images/bootstrap.jpg')}}"
+          alt="bootstrap Logo"
+          width="200px" />
+    </a>
+    
+  </div>
+</div>
+<div class="row mt-5 pt-5">
+  <div class="col">
+    <h2>Introduction</h2>
+    <p>
+      Now that you have a working Flask application, you can get started with
+      doing your own work. Firstly remove anything from the template such as
+      this content here that you won't need in your final code.
+    </p>
+  </div>
+  <div class="col">
+    <h2>Information</h2>
+    <p>
+      This template includes the a simple flask app with bootstrap css on the
+      frontend. It also includes a demo form on the contact page using wtforms.
+    </p>
+  </div>
+  <div class="col">
+    <h2>Docummentation</h2>
+    <ul>
+      <li><a target="_blank" href="https://getbootstrap.com/docs/5.3/">BootStrap 5.3</a></li>
+      <li>
+        <a target="_blank"
+          href="https://flask.palletsprojects.com/en/3.0.x/quickstart/#quickstart"
+          >Flask</a
+        >
+      </li>
+      <li>
+        <a target="_blank" href="https://flask-wtf.readthedocs.io/en/1.2.x/quickstart/"
+          >Flask WTF</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
